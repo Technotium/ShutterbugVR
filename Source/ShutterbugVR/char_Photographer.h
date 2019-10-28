@@ -6,6 +6,9 @@
 #include "GameFramework/Character.h"
 #include "char_Photographer.generated.h"
 
+//FD
+class UMotionControllerComponent; class Ucomp_ViveWand;
+
 UCLASS()
 class SHUTTERBUGVR_API Achar_Photographer : public ACharacter
 {
@@ -14,6 +17,11 @@ class SHUTTERBUGVR_API Achar_Photographer : public ACharacter
 public:
 	// Sets default values for this character's properties
 	Achar_Photographer();
+
+	UPROPERTY(EditAnywhere)
+		Ucomp_ViveWand* rightHand;
+	UPROPERTY(EditAnywhere)
+		Ucomp_ViveWand* leftHand;
 
 protected:
 	// Called when the game starts or when spawned
